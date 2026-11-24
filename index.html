@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjetas CRC</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Tarjetas CRC</h1>
+    <p>Clase, Responsabilidades y Colaboradores</p>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <h2>Crear tarjeta</h2>
+      <form id="crcForm">
+        <input type="hidden" id="editingId">
+
+        <label for="className">Nombre de la clase</label>
+        <input type="text" id="className" placeholder="Ej. Estudiante" required>
+
+        <label for="responsibilities">Responsabilidades</label>
+        <textarea id="responsibilities" rows="4"
+          placeholder="Escribe una responsabilidad por línea..." required></textarea>
+
+        <label for="collaborators">Colaboradores</label>
+        <textarea id="collaborators" rows="3"
+          placeholder="Escribe los colaboradores..."></textarea>
+
+        <div class="botones-form">
+          <button type="submit" id="saveBtn">Agregar tarjeta</button>
+          <button type="button" id="cancelBtn" class="secundario" hidden>Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="resultado">
+      <div class="titulo-lista">
+        <h2>Tarjetas creadas</h2>
+        <button type="button" id="printBtn" class="secundario">Imprimir / Guardar PDF</button>
+      </div>
+      <p id="cardCount">0 tarjetas</p>
+      <div id="cards">
+        <p id="emptyMessage">Todavía no has creado ninguna tarjeta.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Proyecto de Análisis y Diseño de Sistemas</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
